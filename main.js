@@ -1,9 +1,12 @@
 
-/* Get packages an functions */
+/* Get packages */
 const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
 const colors = require('colors');
+
+/* Get functions */
+
 
 /* Setup server */
 const app = express();
@@ -30,7 +33,17 @@ const startScraping = async () => {
             /* Scrape the article link */
             let $articleLink = $DATA(this).find('a').attr('href');
             /* Convert the link to full path for the article */
-            $articleLink = pureURL+link;
+            $articleLink = pureURL+$articleLink;
+            
+
+            /* Scrape the article title */
+            let $articleTitle = $DATA(this).find('h3').find('div').text();
+
+
+            /* Scrape the article topic */
+            let $articleTopic = $DATA(this).find('h3').find('span').text();
+
+
 
         });
 

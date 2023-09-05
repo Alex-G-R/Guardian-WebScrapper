@@ -43,8 +43,6 @@ const startScraping = async () => {
             /* Scrape the article topic */
             let $articleTopic = $DATA(this).find('h3').find('span').text();
 
-
-
         });
 
     })

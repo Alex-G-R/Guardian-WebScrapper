@@ -1,6 +1,6 @@
 # Guardian-WebScrapper
 
-WORK IN PROGRESS, NOT FINISHED
+WORK IN PROGRESS, NOT FINISHED (howerver it's working)
 
 Web scrapper built with Node/Express JS. It scrapes data from guadrian site (news app). It gets you titles, links and photos, and if the article don't have a photo on the main page it gets you the photo directly from the inside of article 
 
